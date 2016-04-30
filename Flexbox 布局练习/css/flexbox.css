@@ -1,0 +1,38 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.box{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	border: 1px solid gray;
+}
+[class*='box_']{
+	border: 1px solid #f00;
+	width: 150px;
+	margin:20px;
+}
+.box_4{
+	border: 1px solid blue;
+	height: 200px;
+}
+.box_1{
+	height: 120px;
+}
+.box_2{
+	height: 100px;
+}
+.box_3{
+	height: 40px;
+}
+@media (max-width: 640px) {
+    .box_4{
+        order: -1;
+    }
+    .box{
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}
